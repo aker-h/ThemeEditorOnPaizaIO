@@ -1,0 +1,41 @@
+{
+    "name": "PaizaLikeIntelliJ",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "PaizaIo用の拡張機能(MV3)",
+
+    "icons": {},
+
+    "permissions": [],
+
+    "action" : {
+        "default_popup" : "action/index.html"
+    },
+
+    "content_scripts": [{
+        "matches": [
+            "https://paiza.io/projects/*"
+        ],
+        "js":[
+            "content_scripts/lib.js",
+            "content_scripts/onload.js"
+        ],
+        "css": [
+            "content_scripts/root.css",
+            "content_scripts/style.css"
+        ]
+    }],
+
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    },
+
+    "web_accessible_resources": [{
+        "resources": [
+            "js/*.js",
+            "json/*.json",
+            "img/*.png"
+        ],
+        "matches": ["<all_urls>"]
+    }]
+}

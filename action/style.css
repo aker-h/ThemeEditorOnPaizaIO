@@ -1,0 +1,104 @@
+html {
+    width: 310px;
+    height: 550px;
+}
+
+body {
+    width: 310px;
+    height: 550px;
+    margin: 0;
+}
+
+.content {
+    width: var(--innerWidth);
+    height: 534px;
+    padding: 8px;
+    background: var(--wallpaper);
+    color: var(--textMain);
+}
+
+header, wrapper, footer {
+    display: block;
+    width: var(--innerWidth);
+}
+
+header {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.menu-label--check-box {
+    display: none;
+}
+
+.menu-label {
+    font-size: 18px;
+}
+
+.menu {
+    height: 0;
+    opacity: 0;
+    transition: .5s;
+    visibility: hidden;
+}
+
+.menu-label--check-box:checked + .menu-label + .menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-label--check-box:checked + .menu-label + #menuText {
+    height: 378px;
+}
+
+.table-form {
+    margin-left: 8px;
+    box-sizing: border-box;
+    border-spacing: 8px;
+}
+
+.col-label {
+    font-size: 18px;
+}
+
+.col-input {
+    margin: 4px;
+    background: var(--inputField);
+    border-radius: 4px;
+    border:1px solid transparent;
+}
+
+.col-input:focus-within {
+    background: transparent;
+    border-color: var(--tLightBlue);
+}
+
+.inputField {
+    width: 140px;
+    outline: none;
+    padding: 2px;
+    border: none;
+    background: transparent;
+    color: var(--textMain);
+    font-size: 18px;
+}
+
+.inputField:focus {
+    background: transparent;
+}
+
+.red {
+    background: red;
+}
+
+.blue {
+    background: blue;
+}
+
+.yello {
+    background: yellow;
+}
+
+.green {
+    background: green;
+}

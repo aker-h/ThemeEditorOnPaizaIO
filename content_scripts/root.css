@@ -1,0 +1,14 @@
+:root {
+    --wallpaper: #2b2b2b;
+    --selected: #323232;
+    --leftBar: #313335;
+
+    --textWhite: #a9b7c6;
+    --textOrange: #cc7832;
+    --textGreen: #6a8759;
+    --textBlue: #6897bb;
+    --textGray: #808080;
+    --textColumnNum: #a4a3a3;
+
+    --size: 18px;
+}

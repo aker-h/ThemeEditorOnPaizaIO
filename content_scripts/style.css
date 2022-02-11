@@ -1,0 +1,65 @@
+.ace-twilight {
+    background-color: var(--wallpaper) !important;
+    color: var(--textWhite) !important;
+}
+
+.ace-twilight .ace_gutter {
+    background: var(--leftBar) !important;
+    color: var(--textColumnNum) !important;
+}
+
+.ace-twilight .ace_gutter-active-line {
+    background-color: var(--selected) !important;
+}
+
+.ace_editor {
+    -webkit-tap-highlight-color: var(--selected) !important;
+    /* position: relative;
+    overflow: hidden;
+    padding: 0;
+    font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+    direction: ltr;
+    text-align: left; */
+}
+
+.ace-twilight .ace_keyword, .ace-twilight .ace_meta {
+    color: var(--textOrange) !important;
+}
+
+.ace-twilight .ace_constant, .ace-twilight .ace_constant.ace_character, .ace-twilight .ace_constant.ace_character.ace_escape, .ace-twilight .ace_constant.ace_other, .ace-twilight .ace_heading, .ace-twilight .ace_markup.ace_heading, .ace-twilight .ace_support.ace_constant {
+    color: var(--textOrange) !important;
+}
+
+.ace_line .ace_operator {
+    color: var(--textWhite) !important;
+}
+
+.ace_line .ace_numeric {
+    color: var(--textBlue) !important;
+}
+
+.ace-twilight .ace_string {
+    color: var(--textGreen) !important;
+}
+
+/* .ace_gutter-cell {
+    position: static !important;
+    height: var(--size) !important;
+    font-size: var(--size) !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-left: 19px;
+    padding-right: 6px;
+    background-repeat: no-repeat;
+}
+
+.ace_text-layer > .ace_line, .ace_text-layer > .ace_line_group {
+    position: static !important;
+    height: var(--size) !important;
+    font-size: var(--size) !important;
+    contain: style size layout;
+    top: 0;
+    left: 0;
+    right: 0;
+} */
