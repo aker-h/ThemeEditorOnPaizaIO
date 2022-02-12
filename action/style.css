@@ -9,7 +9,7 @@ body {
     margin: 0;
 }
 
-.content {
+.contents {
     width: var(--innerWidth);
     height: 534px;
     padding: 8px;
@@ -22,9 +22,19 @@ header, wrapper, footer {
     width: var(--innerWidth);
 }
 
-header {
+header {    
     font-size: 20px;
     margin-bottom: 8px;
+}
+
+.main-contents {
+    height: 495px;
+    /* height: 450px; */
+    overflow-y: auto;
+}
+
+.main-contents::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+    display:none;
 }
 
 .menu-label--check-box {
