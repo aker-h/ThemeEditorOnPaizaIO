@@ -58,7 +58,7 @@ header {
 }
 
 .menu-label--check-box:checked + .menu-label + #menuText {
-    height: 378px;
+    height: 420px;
 }
 
 .table-form {
@@ -84,7 +84,7 @@ header {
 }
 
 .inputField {
-    width: 140px;
+    width: 130px;
     outline: none;
     padding: 2px;
     border: none;

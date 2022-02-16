@@ -1,7 +1,7 @@
 (async () => {
     insertStyleNodeToHead();
 
-    test();
+    // test();
     
     return PROMISE;
 })();

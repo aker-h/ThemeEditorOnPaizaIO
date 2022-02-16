@@ -5,6 +5,10 @@
         <title>設定フォーム</title>
         <link rel="stylesheet" href="root.css">
         <link rel="stylesheet" href="style.css">
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/lib.js"></script>
+        <script src="lib.js"></script>
+        <script src="onload.js"></script>
     </head>
     <body>
         <div class="contents">
@@ -17,70 +21,77 @@
                         <tr>
                             <td class="col-label">真偽値</td>
                             <td class="col-input">
-                                <input type="text" class="inputField" placeholder="#">
+                                <input type="text" class="inputField" id="inputBoolean" placeholder="#">
                             </td>
                             <td class="col-color red"></td>
                         </tr>
                         <tr>
                             <td class="col-label">コメント</td>
                             <td class="col-input">
-                                <input type="text" class="inputField" placeholder="#">
+                                <input type="text" class="inputField" id="inputComment" placeholder="#">
                             </td>
                             <td class="col-color blue"></td>
                         </tr>
                         <tr>
                             <td class="col-label">関数</td>
                             <td class="col-input">
-                                <input type="text" class="inputField" placeholder="#">
+                                <input type="text" class="inputField" id="inputFunction" placeholder="#">
                             </td>
                             <td class="col-color yello"></td>
                         </tr>
                         <tr>
                             <td class="col-label">識別子</td>
                             <td class="col-input">
-                                <input type="text" class="inputField" placeholder="#">
+                                <input type="text" class="inputField" id="inputIdentifier" placeholder="#">
                             </td>
                             <td class="col-color green"></td>
                         </tr>
                         <tr>
-                            <td class="col-label">予約後</td>
+                            <td class="col-label">予約語</td>
                             <td class="col-input">
-                                <input type="text" class="inputField" placeholder="#">
+                                <input type="text" class="inputField" id="inputKeyword" placeholder="#">
                             </td>
                             <td class="col-color red"></td>
                         </tr>
                         <tr>
                             <td class="col-label">言語</td>
                             <td class="col-input">
-                                <input type="text" class="inputField" placeholder="#">
+                                <input type="text" class="inputField" id="inputLanguage" placeholder="#">
                             </td>
                             <td class="col-color red"></td>
                         </tr>
                         <tr>
                             <td class="col-label">数値</td>
                             <td class="col-input">
-                                <input type="text" class="inputField" placeholder="#">
+                                <input type="text" class="inputField" id="inputNumeric" placeholder="#">
                             </td>
                             <td class="col-color red"></td>
                         </tr>
                         <tr>
                             <td class="col-label">演算子</td>
                             <td class="col-input">
-                                <input type="text" class="inputField" placeholder="#">
+                                <input type="text" class="inputField" id="inputOperator" placeholder="#">
                             </td>
                             <td class="col-color red"></td>
                         </tr>
                         <tr>
                             <td class="col-label">文字/文字列</td>
                             <td class="col-input">
-                                <input type="text" class="inputField" placeholder="#">
+                                <input type="text" class="inputField" id="inputString" placeholder="#">
                             </td>
                             <td class="col-color red"></td>
                         </tr>
                         <tr>
                             <td class="col-label">サポート</td>
                             <td class="col-input">
-                                <input type="text" class="inputField" placeholder="#">
+                                <input type="text" class="inputField" id="inputSupport" placeholder="#">
+                            </td>
+                            <td class="col-color red"></td>
+                        </tr>
+                        <tr>
+                            <td class="col-label">その他</td>
+                            <td class="col-input">
+                                <input type="text" class="inputField" id="inputOther" placeholder="#">
                             </td>
                             <td class="col-color red"></td>
                         </tr>
@@ -91,74 +102,32 @@
                 <div class="menu" id="menuBG">
                     <table class="table-form">
                         <tr>
-                            <td class="col-label">真偽値</td>
+                            <td class="col-label">行ラベル背景</td>
                             <td class="col-input">
-                                <input type="text" class="inputField" placeholder="#">
+                                <input type="text" class="inputField" id="inputLeftPainBG" placeholder="#">
                             </td>
                             <td class="col-color red"></td>
                         </tr>
                         <tr>
-                            <td class="col-label">コメント</td>
+                            <td class="col-label">行ラベル色</td>
                             <td class="col-input">
-                                <input type="text" class="inputField" placeholder="#">
+                                <input type="text" class="inputField" id="inputColumnNumber" placeholder="#">
                             </td>
                             <td class="col-color blue"></td>
                         </tr>
                         <tr>
-                            <td class="col-label">関数</td>
+                            <td class="col-label">エディタ背景</td>
                             <td class="col-input">
-                                <input type="text" class="inputField" placeholder="#">
+                                <input type="text" class="inputField" id="inputBackground" placeholder="#">
                             </td>
                             <td class="col-color yello"></td>
                         </tr>
                         <tr>
-                            <td class="col-label">識別子</td>
+                            <td class="col-label">アクティブ行</td>
                             <td class="col-input">
-                                <input type="text" class="inputField" placeholder="#">
+                                <input type="text" class="inputField" id="inputActiveColumn" placeholder="#">
                             </td>
                             <td class="col-color green"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-label">予約後</td>
-                            <td class="col-input">
-                                <input type="text" class="inputField" placeholder="#">
-                            </td>
-                            <td class="col-color red"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-label">言語</td>
-                            <td class="col-input">
-                                <input type="text" class="inputField" placeholder="#">
-                            </td>
-                            <td class="col-color red"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-label">数値</td>
-                            <td class="col-input">
-                                <input type="text" class="inputField" placeholder="#">
-                            </td>
-                            <td class="col-color red"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-label">演算子</td>
-                            <td class="col-input">
-                                <input type="text" class="inputField" placeholder="#">
-                            </td>
-                            <td class="col-color red"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-label">文字/文字列</td>
-                            <td class="col-input">
-                                <input type="text" class="inputField" placeholder="#">
-                            </td>
-                            <td class="col-color red"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-label">サポート</td>
-                            <td class="col-input">
-                                <input type="text" class="inputField" placeholder="#">
-                            </td>
-                            <td class="col-color red"></td>
                         </tr>
                     </table>
                 </div>   

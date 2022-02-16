@@ -6,7 +6,10 @@
 
     "icons": {},
 
-    "permissions": [],
+    "permissions": [
+        "activeTab",
+        "tabs"
+    ],
 
     "action" : {
         "default_popup" : "action/index.html"
@@ -17,8 +20,10 @@
             "https://paiza.io/projects/*"
         ],
         "js":[
+            "js/lib.js",
             "content_scripts/lib.js",
-            "content_scripts/onload.js"
+            "content_scripts/onload.js",
+            "content_scripts/onMessage.js"
         ],
         "css": [
             "content_scripts/root.css"
