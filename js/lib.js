@@ -40,21 +40,21 @@ class ColorCode {
 class Property {
     constructor (property = null) {
         if (property !== null) {
-            this._boolean = property._boolean;
-            this._comment = property._comment;
-            this._function = property._function;
-            this._identifier = property._identifier;
-            this._keyword = property._keyword;
-            this._language = property._language;
-            this._numeric = property._numeric;
-            this._operator = property._operator;
-            this._string = property._string;
-            this._support = property._support;
-            this._other = property._other;
-            this._leftPainBG = property._leftPainBG;
-            this._columnNumber = property._columnNumber;
-            this._background = property._background;
-            this._activeColumn = property._activeColumn;
+            this._boolean = new ColorCode(property._boolean.value);
+            this._comment = new ColorCode(property._comment.value);
+            this._function = new ColorCode(property._function.value);
+            this._identifier = new ColorCode(property._identifier.value);
+            this._keyword = new ColorCode(property._keyword.value);
+            this._language = new ColorCode(property._language.value);
+            this._numeric = new ColorCode(property._numeric.value);
+            this._operator = new ColorCode(property._operator.value);
+            this._string = new ColorCode(property._string.value);
+            this._support = new ColorCode(property._support.value);
+            this._other = new ColorCode(property._other.value);
+            this._leftPainBG = new ColorCode(property._leftPainBG.value);
+            this._columnNumber = new ColorCode(property._columnNumber.value);
+            this._background = new ColorCode(property._background.value);
+            this._activeColumn = new ColorCode(property._activeColumn.value);
         }
     }
 
@@ -179,4 +179,16 @@ class Property {
     getColumnNumber () {return this._columnNumber.value;}
     getBackground () {return this._background.value;}
     getActiveColumn () {return this._activeColumn.value;}
+};
+
+function readPropertyFromStorage () {
+    return new Promise ((resolve) => {
+        chrome.storage.local.get((items) => {
+            let property = items.property;
+    
+            console.log(property);
+    
+            resolve(new Property(property));
+        });
+    });   
 };

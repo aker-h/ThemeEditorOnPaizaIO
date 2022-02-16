@@ -71,13 +71,6 @@ function insertStyleNodeToHead () {
 function colorCodeSync (argProperty) {
     let property = new Property(argProperty);
 
-    console.log(property);
-
-    // let editableThemeRoot = document.getElementById('edelitableThemeRoot');
-    // let editableTheme = document.getElementById('editableTheme');
-
-    console.log(editableThemeRoot);
-
     class Root {
         constructor () {
             this.values = [];
@@ -109,6 +102,7 @@ function colorCodeSync (argProperty) {
 
         addValue (value) {
             this.values.push(value);
+            console.log(this.getValues());
         }
 
         getValues () {
@@ -209,7 +203,7 @@ function colorCodeSync (argProperty) {
     }
 
     if (property.checkNotNullAbout('operator')) {
-        root.addValue(`--ace_numeric: ${property.getOperator()}`);
+        root.addValue(`--ace_operator: ${property.getOperator()}`);
         
         let selector = '.ace_line .ace_operatorc';
 
@@ -266,7 +260,7 @@ function colorCodeSync (argProperty) {
             selector += `,${defaultTheme} .ace_gutter`
         }
 
-        return `${selector} {\n    background: var(--leftPainBG) !important\n}`;
+        theme.addValue(`${selector} {\n    background: var(--leftPainBG) !important\n}`);
 
     }
 
@@ -278,20 +272,20 @@ function colorCodeSync (argProperty) {
             selector += `,${defaultTheme} .ace_gutter`
         }
 
-        return `${selector} {\n    color: var(--columnNumber) !important\n}`;
+        theme.addValue(`${selector} {\n    color: var(--columnNumber) !important\n}`);
 
     }
 
     if (property.checkNotNullAbout('background')) {
         root.addValue(`--background: ${property.getBackground()}`);
 
-        selector = '';
+        let selector = '';
         
         for (let defaultTheme of defaultThemes) {
             selector += `${defaultTheme}, `
         }
 
-        let temp = `${selector} {\n    color: var(--background) !important\n}`;
+        let temp = `${selector} {\n    background: var(--background) !important\n}`;
 
         theme.addValue(temp.replace(',  {', ' {'));
     }
@@ -300,12 +294,12 @@ function colorCodeSync (argProperty) {
         root.addValue(`--activeColumn: ${property.getActiveColumn()}`);
 
         let selector = '.ace_marker-layer .ace_active-line';
+
         for (let defaultTheme of defaultThemes) {
             selector += `, ${defaultTheme} .ace_marker-layer .ace_active-line`;
         }
 
-        return ` ${selector} {background: var(--activeColumn) !important;}`;
-
+        theme.addValue(`${selector} {\n    background: var(--activeColumn) !important;\n}`);
     }
 
     editableThemeRoot.innerHTML = root.getValues();

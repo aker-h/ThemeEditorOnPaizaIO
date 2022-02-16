@@ -28,9 +28,10 @@ header {
 }
 
 .main-contents {
-    height: 495px;
+    height: 450px;
     /* height: 450px; */
     overflow-y: auto;
+    margin-bottom: 8px;
 }
 
 .main-contents::-webkit-scrollbar {  /* Chrome, Safari 対応 */
@@ -97,6 +98,10 @@ header {
     background: transparent;
 }
 
+.col-color {
+    width: 10px;
+}
+
 .red {
     background: red;
 }
@@ -111,4 +116,30 @@ header {
 
 .green {
     background: green;
+}
+
+.bottom-button {
+    float: right;
+    width: 88px;
+    height: 30px;
+    margin: 0 8px;
+    background: var(--tLightGray);
+    border: 1px solid var(--tLightGray);
+    border-radius: 4px;
+    color: var(--textBlack);
+    font-size: 18px;
+}
+
+.bottom-button.primary {
+    background: var(--tLightBlue);
+    border-color: var(--tLightBlue);
+    color: var(--textMain);
+}
+
+.bottom-button:hover {
+    background: var(--tLightGrayOn);
+}
+
+.bottom-button.primary:hover {
+    background: var(--tLightBlueOn);
 }

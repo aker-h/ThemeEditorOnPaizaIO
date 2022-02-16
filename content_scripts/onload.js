@@ -1,7 +1,9 @@
 (async () => {
     insertStyleNodeToHead();
 
-    // test();
+    let property = await readPropertyFromStorage();
+
+    colorCodeSync(property);
     
     return PROMISE;
 })();
